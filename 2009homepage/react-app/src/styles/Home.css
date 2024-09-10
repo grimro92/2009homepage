@@ -1,0 +1,49 @@
+/* 全体のレイアウトを左右分割に設定 */
+.base {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  /*background-color: #ffffff;  中央部分の背景色 */
+  background-image: url('../assets/bg-bluecheck2.png'), url('../assets/bg-bluecheck2.png');
+  background-position: left center, right center; /* 背景画像の位置を左と右に設定 */
+  /*background-repeat: no-repeat;  背景画像の繰り返しを無効化 */
+  background-size: 240px auto, 240px auto; /* 画像の幅を240pxに固定し、縦方向は自動調整 */
+}
+
+/* 左側のナビゲーションバーのスタイル */
+.hidari {
+  width: 240px; /* 左側の幅 */
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0); /* 半透明の背景色 */
+  border-right: 1px solid #872732; /* 右側にボーダーを追加 */
+  overflow-y: auto;
+}
+
+/* 右側のコンテンツエリアのスタイル */
+.migi {
+  flex: 1;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0); /* 半透明の背景色 */
+  overflow-y: auto;
+}
+
+/* ナビゲーションメニューのスタイル */
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  margin-bottom: 10px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #872732;
+  font-weight: bold;
+}
+
+.menu ul li a:hover {
+  color: #dfca5d;
+}
